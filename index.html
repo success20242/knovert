@@ -1,61 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onyekachi Ebosi — Design Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: #0d0d0d; color: #fff; }
-    header { text-align: center; padding: 90px 20px; background: linear-gradient(135deg, #1a1a1a, #352a1a); }
-    header h1 { font-size: 3.3rem; margin-bottom: 10px; font-weight: 700; }
-    header p { font-size: 1.25rem; opacity: 0.85; max-width: 700px; margin: 10px auto 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .btn-container { margin-top: 30px; }
-    .btn { background: #c59d5f; padding: 12px 28px; border-radius: 30px; color: #000; font-weight: 600; text-decoration: none; transition: 0.3s; }
-    .btn:hover { background: #e2b97d; }
+<title>Knovert Technology | IKCS Platform</title>
 
-    .section-title { text-align: center; font-size: 2.2rem; margin: 60px 0 25px; font-weight: 600; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; padding: 0 20px 50px; }
-    .gallery img { width: 100%; border-radius: 12px; background: #222; object-fit: cover; height: 330px; transition: 0.3s; }
-    .gallery img:hover { transform: scale(1.03); }
+<style>
+body { margin:0; font-family:'Poppins',sans-serif; background:#0d0d0d; color:#fff; }
 
-    .about, .process, .contact { max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.75; font-size: 1.1rem; opacity: 0.93; }
+/* NAVBAR */
+nav {
+  position:sticky;
+  top:0;
+  background:#111;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 25px;
+  z-index:1000;
+}
 
-    .process-list { margin-top: 20px; padding-left: 20px; }
-    .process-list li { margin-bottom: 10px; }
+.nav-left {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-    footer { text-align: center; padding: 40px; margin-top: 50px; background: #111; color: #aaa; font-size: 0.9rem; }
-      body, header, footer, .gallery img { transition: all 0.4s ease-in-out; }
-    .gallery img:hover { transform: scale(1.05); box-shadow: 0 0 18px #c59d5f; }
-  </style>
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light');
-    }
-  </script>
-  <style>
-    body.light { background: #f5f5f5; color: #111; }
-    body.light header { background: linear-gradient(135deg, #fff, #ddd); }
-    body.light footer { background: #e5e5e5; color: #444; }
-    .mode-btn { position: fixed; top: 20px; right: 20px; background: #c59d5f; border: none; padding: 10px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; }
-    body.light .mode-btn { background: #444; color: #fff; }
-  </style>
+.nav-left img { width:40px; }
+.nav-left span { font-weight:600; }
+
+.nav-links a {
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.nav-links a:hover { color:#c59d5f; }
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#1a1a1a,#352a1a);
+}
+
+.hero h1 { font-size:3rem; }
+.hero p { max-width:700px; margin:15px auto; opacity:0.85; }
+
+.btn {
+  background:#c59d5f;
+  padding:12px 25px;
+  border-radius:25px;
+  color:#000;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* DEMO */
+.demo-box {
+  max-width:700px;
+  margin:50px auto;
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.demo-box input {
+  width:80%;
+  padding:12px;
+  border:none;
+  border-radius:5px;
+  margin-bottom:10px;
+}
+
+.demo-box button {
+  padding:10px 20px;
+  background:#c59d5f;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* SECTION */
+.section { max-width:1000px; margin:auto; padding:40px 20px; }
+.section h2 { text-align:center; margin-bottom:20px; }
+
+/* FEATURES */
+.features {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.feature {
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* PORTFOLIO */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
+  height:300px;
+  object-fit:cover;
+}
+
+/* BOOKS */
+.books {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.book {
+  background:#fff;
+  color:#000;
+  padding:15px;
+  border-radius:10px;
+  width:250px;
+  text-align:center;
+}
+
+.book img { width:100%; }
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:30px;
+  background:#111;
+  color:#aaa;
+}
+</style>
+
+<script>
+function generateDemo() {
+  let input = document.getElementById("demoInput").value;
+  if(input === "") {
+    alert("Paste a link first");
+  } else {
+    alert("Demo Mode: EPUB generated from " + input);
+  }
+}
+</script>
+
 </head>
-<body>
-  <button class="mode-btn" onclick="toggleMode()">Toggle Light/Dark</button>
-  <header>
-    <h1>Onyekachi Ebosi — Art & AI Design Portfolio</h1>
-    <p>A multidisciplinary creator blending African culture, symbolism, futurism, and emotional storytelling — brought to life through advanced AI design techniques.</p>
-    <div class="btn-container">
-      <a href="#portfolio" class="btn">View My Work</a>
-    </div>
-  </header>
 
-  <h2 id="portfolio" class="section-title">Featured Works</h2>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <img src="https://i.imgur.com/bFctVmv.png">
+    <span>Knovert</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#books">Books</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Turn Content Into eBooks Instantly</h1>
+  <p>Knovert Technology powers the Interactive Knowledge Conversion System (IKCS) — transforming videos and web content into structured EPUB books.</p>
+  <a href="#demo" class="btn">Try Demo</a>
+</div>
+
+<!-- DEMO -->
+<div id="demo" class="demo-box">
+  <h2>Live Demo (Prototype)</h2>
+  <input type="text" id="demoInput" placeholder="Paste YouTube or article link...">
+  <br>
+  <button onclick="generateDemo()">Generate eBook</button>
+</div>
+
+<!-- FEATURES -->
+<div id="features" class="section">
+  <h2>Core Features</h2>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Content Extraction</h3>
+      <p>Automatically pulls text from videos and web pages.</p>
+    </div>
+
+    <div class="feature">
+      <h3>EPUB Generation</h3>
+      <p>Creates structured, readable eBooks instantly.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Smart Formatting</h3>
+      <p>Organizes content into chapters and sections.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="section">
+  <h2>Creative Portfolio</h2>
+
   <div class="gallery">
-    <img src="https://i.imgur.com/ktiPeNh.jpeg"alt="Featured Art 1">
+     <img src="https://i.imgur.com/ktiPeNh.jpeg"alt="Featured Art 1">
     <img src="https://i.imgur.com/UHSYdQO.jpeg"alt="Featured Art 2">
     <img src="https://i.imgur.com/5bLiB3o.jpeg"alt="Featured Art 3">
     <img src="https://i.imgur.com/8txYhAi.jpeg"alt="Featured Art 4">
@@ -77,49 +240,36 @@
     <img src="https://i.imgur.com/ka5rXmi.png"alt="Featured Art 20">
     <img src="https://i.imgur.com/qz8wKwI.jpeg"alt="Featured Art 21">
   </div>
+</div>
 
-  <h2 class="section-title">About the Artist</h2>
-  <div class="about">
-    <p>Onyekachi Ebosi is a digital storyteller whose creations merge cultural roots, futuristic concepts, and deep emotional narratives. His visual style highlights African identity, symbolism, nature, and imaginative reinterpretations of traditional elements — producing artwork that educates, sparks curiosity, and inspires audiences globally.</p>
-    <p>Driven by creativity and innovation, he uses cutting-edge AI tools to craft high-quality visuals suitable for editorial design, world-building, character creation, and immersive storytelling experiences.</p>
+<!-- BOOKS -->
+<div id="books" class="section">
+  <h2>Published Books</h2>
+
+  <div class="books">
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/41aXkZpmDCL._SX331_BO1,204,203,200_.jpg">
+      <h3>The Artifact Code</h3>
+      <a href="https://www.amazon.com/dp/B0FPFFB4LH" target="_blank" class="btn">Buy</a>
+    </div>
+
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/41kZc6C0u8L._SX331_BO1,204,203,200_.jpg">
+      <h3>Catalog of Stories</h3>
+      <a href="https://www.amazon.com/dp/B0G2GTWL7Z" target="_blank" class="btn">Buy</a>
+    </div>
   </div>
+</div>
 
-  <h2 class="section-title">My Creative Process</h2>
-  <div class="process">
-    <p>Each artwork is crafted with a blend of research, cultural insight, and AI-driven iteration. My process includes:</p>
-    <ul class="process-list">
-      <li><strong>Concept Development:</strong> Identifying themes rooted in culture, fantasy, heritage, or emotion.</li>
-      <li><strong>Prompt Engineering:</strong> Crafting detailed AI prompts to achieve high-quality, stylistically consistent visuals.</li>
-      <li><strong>Iteration & Refinement:</strong> Enhancing lighting, textures, mood, and storytelling elements.</li>
-      <li><strong>Final Styling:</strong> Color-grading, retouching, and preparing images for display or professional use.</li>
-    </ul>
-  </div>
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: onyekachiebosi@gmail.com</p>
+</div>
 
-  <h2 class="section-title">Contact & Social Links</h2>
-  <div class="contact">
-    <p>If you would like to collaborate, request custom visuals, or review additional work, feel free to reach out:</p>
-    <p><strong>Email:</strong> onyekachiebosi@gmail.com</p>
-    <p><strong>Instagram:</strong> instagram.com/onyekachijoelebosi</p>
-    <p><strong>Facebook:</strong> facebook.com/OnyekachiEbosiOfficial</p>
-    <p><strong>TikTok:</strong> tiktok.com/@amy4real23</p>
-  </div>
-
-    <h2 class="section-title">AI Tools Used</h2>
-  <div class="about">
-    <p>I create my visuals using advanced AI tools that enhance creativity, detail, and storytelling impact, including:</p>
-    <ul>
-      <li><strong>Playground AI</strong> – high‑quality rendering & design</li>
-      <li><strong>Midjourney</strong> – artistic concepts & character creation</li>
-      <li><strong>Leonardo AI</strong> – stylistic variation & enhancement</li>
-      <li><strong>Photoshop / Lightroom</strong> – final retouch & color grading</li>
-    </ul>
-    <p>You can also download my full PDF portfolio below:</p>
-    <a href="portfolio.pdf" download class="btn" style="display:inline-block;margin-top:15px;">Download PDF Portfolio</a>
-  </div>
-
-  <footer>
-    © 2025 Onyekachi Ebosi — All Rights Reserved
-  </footer>
+<footer>
+© 2026 Knovert Technology
+</footer>
 
 </body>
 </html>
